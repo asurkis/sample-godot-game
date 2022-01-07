@@ -39,7 +39,6 @@ func _process(delta):
 
 func _on_Player_body_entered(_body):
 	disable()
-	print("Had been hit!")
 	emit_signal("hit")
 
 func disable():
