@@ -13,24 +13,24 @@ animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "walk",
-"speed": 10.0
+"speed": 3.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "swim",
-"speed": 10.0
+"speed": 3.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "fly",
-"speed": 10.0
+"speed": 3.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 36.0
 height = 28.0
 
-[node name="Mob" type="RigidBody2D"]
+[node name="Mob" type="RigidBody2D" groups=["mobs"]]
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 7 )
