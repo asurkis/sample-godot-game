@@ -37,8 +37,9 @@ func _process(delta):
 		$AnimatedSprite.flip_h = false
 		$AnimatedSprite.flip_v = velocity.y > 0
 
-func _on_Player_body_entered(body):
+func _on_Player_body_entered(_body):
 	disable()
+	print("Had been hit!")
 	emit_signal("hit")
 
 func disable():
@@ -48,4 +49,4 @@ func disable():
 func start(pos):
 	position = pos
 	show()
-	$CollisionShape2D.disabled = false
+	$CollisionShape2D.set_deferred("disabled", false)
